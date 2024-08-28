@@ -22,20 +22,24 @@ class PreviewScreen extends StatelessWidget {
         appBar: AppBar(
           title: const Text('Preview screen'),
         ),
-        body: Column(
-          children: [
-            CustomPaint(
-              painter: GridPainter(data),
-              size: Size(sideSize, sideSize),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 8),
-              child: Text(
-                data.steps.map((e) => e.toString()).toList().join('->'),
-                textAlign: TextAlign.center,
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              Center(
+                child: CustomPaint(
+                  painter: GridPainter(data),
+                  size: Size(sideSize, sideSize),
+                ),
               ),
-            ),
-          ],
+              Padding(
+                padding: const EdgeInsets.only(top: 8),
+                child: Text(
+                  data.steps.map((e) => e.toString()).toList().join('->'),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+            ],
+          ),
         ));
   }
 }

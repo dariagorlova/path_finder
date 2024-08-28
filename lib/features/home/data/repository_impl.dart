@@ -1,6 +1,4 @@
-import 'package:path_finder/features/home/data/api_service.dart';
-import 'package:path_finder/features/home/domain/models/grid_model.dart';
-import 'package:path_finder/features/home/domain/repository.dart';
+import '../index.dart';
 
 class HomeRepositoryImpl implements HomeRepository {
   final HomeApiService _apiService;

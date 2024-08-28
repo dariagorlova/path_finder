@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:path_finder/features/home/domain/models/coordinate_model.dart';
-import 'package:path_finder/features/process/domain/model/result_model.dart';
+
+import '../../../../core/index.dart';
+import '../../../home/index.dart';
+import '../../../process/index.dart';
 
 class GridPainter extends CustomPainter {
   final ResultModel model;
@@ -19,14 +21,14 @@ class GridPainter extends CustomPainter {
     for (int i = 0; i < model.field.length; i++) {
       for (int j = 0; j < model.field[i].length; j++) {
         final coord = Coordinate(x: j, y: i);
-        var color = model.field[i][j] == '.' ? Colors.white : Colors.black;
+        var color = model.field[i][j] == '.' ? colorCell : colorWall;
         if (model.steps.contains(coord)) {
           if (coord == model.steps.last) {
-            color = const Color(0xFF009688);
+            color = colorFinish;
           } else if (coord == model.steps.first) {
-            color = const Color(0xFF64FFDA);
+            color = colorStart;
           } else {
-            color = const Color(0xFF4CAF50);
+            color = colorStep;
           }
         }
 

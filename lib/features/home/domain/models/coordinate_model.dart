@@ -1,6 +1,6 @@
 import 'dart:math';
 
-import 'package:path_finder/features/process/domain/model/direction.dart';
+import '../../../process/index.dart';
 
 class Coordinate {
   final int x;

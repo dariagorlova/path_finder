@@ -1,6 +1,5 @@
-import 'package:path_finder/features/home/domain/models/coordinate_model.dart';
-import 'package:path_finder/features/home/domain/models/grid_model.dart';
-import 'package:path_finder/features/process/domain/model/direction.dart';
+import '../../home/index.dart';
+import '../index.dart';
 
 class Pathfinder {
   final GridData gridData;
@@ -19,11 +18,7 @@ class Pathfinder {
   ];
 
   // isolate function. case it's a little bit ... wrong) to do calculations in main thread
-  static Future<List<Coordinate>> findShortestPath(
-      Pathfinder pathFinder) async {
-    //todo: remove delay and all future features from function for production
-    await Future.delayed(const Duration(seconds: 2));
-
+  static List<Coordinate> findShortestPath(Pathfinder pathFinder) {
     final List<Coordinate> queue = [pathFinder.gridData.start];
     final Map<Coordinate, Coordinate?> cameFrom = {};
     final Map<Coordinate, double> costSoFar = {pathFinder.gridData.start: 0};

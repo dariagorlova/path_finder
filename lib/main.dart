@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:path_finder/core/extensions/bloc_extension.dart';
-import 'package:path_finder/features/home/data/api_service.dart';
-import 'package:path_finder/features/home/data/repository_impl.dart';
-import 'package:path_finder/features/home/presentation/bloc/home_cubit.dart';
-import 'package:path_finder/features/home/presentation/home_screen.dart';
+import 'core/index.dart';
+import 'features/home/index.dart';
 
 void main() {
   runApp(const MyApp());

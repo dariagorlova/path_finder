@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:path_finder/features/process/presentation/bloc/process_cubit.dart';
-import 'package:path_finder/features/results/presentation/result_list_screen.dart';
+
+import '../../results/index.dart';
+import '../index.dart';
 
 class ProcessScreen extends StatefulWidget {
   const ProcessScreen({super.key});

@@ -1,5 +1,7 @@
 import 'package:dio/dio.dart';
-import 'package:path_finder/features/process/domain/model/send_result.dart';
+
+import '../../../core/index.dart';
+import '../index.dart';
 
 abstract class ProcessApiService {
   Future<List<SendResult>> sendData(List<Map<String, dynamic>> data);
@@ -8,7 +10,7 @@ abstract class ProcessApiService {
 class ProcessApiServiceImpl implements ProcessApiService {
   @override
   Future<List<SendResult>> sendData(List<Map<String, dynamic>> data) async {
-    const sendUrl = 'https://flutter.webspark.dev/flutter/api';
+    const sendUrl = baseUrl;
     try {
       final response = await Dio().post(sendUrl, data: data);
 

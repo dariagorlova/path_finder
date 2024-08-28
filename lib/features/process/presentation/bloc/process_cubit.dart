@@ -1,9 +1,8 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:path_finder/features/home/domain/models/coordinate_model.dart';
-import 'package:path_finder/features/home/domain/models/grid_model.dart';
-import 'package:path_finder/features/process/domain/model/result_model.dart';
-import 'package:path_finder/features/process/domain/repository.dart';
+
+import '../../../home/index.dart';
+import '../../index.dart';
 
 part 'process_state.dart';
 

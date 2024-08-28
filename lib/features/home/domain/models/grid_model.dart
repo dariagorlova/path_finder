@@ -1,4 +1,4 @@
-import 'package:path_finder/features/home/domain/models/coordinate_model.dart';
+import '../../index.dart';
 
 class GridData {
   final String id;

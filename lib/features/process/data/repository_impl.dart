@@ -1,10 +1,7 @@
 import 'package:flutter/foundation.dart';
-import 'package:path_finder/features/home/domain/models/coordinate_model.dart';
-import 'package:path_finder/features/home/domain/models/grid_model.dart';
-import 'package:path_finder/features/process/data/api_service.dart';
-import 'package:path_finder/features/process/data/path_finder.dart';
-import 'package:path_finder/features/process/domain/model/send_result.dart';
-import 'package:path_finder/features/process/domain/repository.dart';
+
+import '../../home/index.dart';
+import '../index.dart';
 
 class ProcessRepositoryImpl implements ProcessRepository {
   final ProcessApiService _apiService;

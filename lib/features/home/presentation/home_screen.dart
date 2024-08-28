@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:path_finder/core/extensions/bloc_extension.dart';
-import 'package:path_finder/features/home/presentation/bloc/home_cubit.dart';
-import 'package:path_finder/features/process/data/api_service.dart';
-import 'package:path_finder/features/process/data/repository_impl.dart';
-import 'package:path_finder/features/process/presentation/bloc/process_cubit.dart';
-import 'package:path_finder/features/process/presentation/process_screen.dart';
+
+import '../../../core/index.dart';
+import '../../process/index.dart';
+import '../index.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -20,7 +18,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
     super.initState();
-    _controller.text = 'https://flutter.webspark.dev/flutter/api';
+    _controller.text = baseUrl;
   }
 
   @override

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:path_finder/features/preview/presentation/preview_screen.dart';
-import 'package:path_finder/features/process/domain/model/result_model.dart';
+
+import '../../preview/index.dart';
+import '../../process/index.dart';
 
 class ResultListScreen extends StatelessWidget {
   const ResultListScreen({

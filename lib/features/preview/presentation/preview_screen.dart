@@ -1,8 +1,9 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:path_finder/features/preview/presentation/widgets/grid_painter.dart';
-import 'package:path_finder/features/process/domain/model/result_model.dart';
+
+import '../../process/index.dart';
+import '../index.dart';
 
 class PreviewScreen extends StatelessWidget {
   const PreviewScreen({

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:path_finder/features/process/presentation/bloc/process_cubit.dart';
+import 'package:path_finder/features/results/presentation/result_list_screen.dart';
 
 class ProcessScreen extends StatefulWidget {
   const ProcessScreen({super.key});
@@ -26,15 +27,12 @@ class _ProcessScreenState extends State<ProcessScreen> {
               .showSnackBar(SnackBar(content: Text(state.message)));
         }
         if (state is ProcessUploadDone) {
-          // Navigator.push(
-          //   context,
-          //   MaterialPageRoute(
-          //     builder: (_) => const ProcessScreen().createWithCubit(
-          //       (context) =>
-          //           ProcessCubit(state.homeModel, ProcessRepositoryImpl()),
-          //     ),
-          //   ),
-          // );
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (_) => ResultListScreen(data: state.data),
+            ),
+          );
         }
       },
       builder: (context, state) => Scaffold(

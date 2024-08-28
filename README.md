@@ -1,16 +1,17 @@
 # path_finder
 
-A new Flutter project.
+Тестове завдання для Webspark.
 
-## Getting Started
+## Мета додатку
 
-This project is a starting point for a Flutter application.
+Розрахувати найкоротший шлях від однієї точки до іншої на квадратній сітці довільного розміру, обходячи "стіни" і пересуваючись вертикально/горизонтально/діагонально.
 
-A few resources to get you started if this is your first Flutter project:
+## Що вміє додаток
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Після запуску додатку, користувач повинен ввести відповідний URL для завантаження списку мап. Після натискання кнопки "Start counting process", перевіряється коректність введеного URL та надсилається запит на отримання списку завдань зі знаходження найкоротшого шляху.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Під час розрахунку результатів змінюється значення % виконання завдання по розрахунку
+
+Після завершення розрахунків - з'являється кнопка (Send results to server) для надсилання результатів розрахунків на API
+
+Результат розрахунків відображається у вигляді списку строк найкоротшого шляху до для кожної сітки з можливістю подивитися результат в окремому вікні у вигляді сітки, на якій відображається знайдений найкоротший шлях
